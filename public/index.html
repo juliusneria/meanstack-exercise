@@ -1,0 +1,32 @@
+<!--version 3.0-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:image" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:title" content="Hero"/>
+    <meta charset="UTF-8">
+
+    <title>NBS Express</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <!--<script>window.jQuery || document.write('<script  src="libs/jquery/dist/jquery.min.js"><\/script>')</script>-->
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+
+    <!--MAIN-->
+    <script src="js/app.module.js"></script>
+    <script src="js/app.config.js"></script>
+
+    <!--CONTROLLERS-->
+    <script src="js/controllers/heroController.js"></script>
+
+    <!--SERVICES-->
+    <script src="js/services/heroServices.js"></script>
+</head>
+<body ng-app="App">
+<ui-view></ui-view>
+</body>
+
+</html>

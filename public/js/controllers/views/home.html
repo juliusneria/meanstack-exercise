@@ -1,0 +1,103 @@
+<div class="container-fluid" role="main">
+    <div>
+        <h1 class="m-t-lg text-center" style="margin-top: 7%">Hero Lists</h1>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">
+            Launch Add modal
+        </button>
+        <hr class="my-4">
+
+        <div class="fields">
+            <div class="row fields h-10">
+                <div align="center" class="col-lg-1">
+                    <h1>Id</h1>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h1>Branchs</h1>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h1>Locations</h1>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h1>Names</h1>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h1>Managers</h1>
+                </div>
+                <div align="center" class="col-lg-3">
+                    <h1>Controls</h1>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+        <div ng-repeat="store in stores track by $index">
+            <div class="row h-10">
+                <div align="center" class="col-lg-1">
+                    <h4>{{store.store_id}}</h4>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h4>{{store.branch}}</h4>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h4>{{store.location}}</h4>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h4>{{store.name}}</h4>
+                </div>
+                <div align="center" class="col-lg-2">
+                    <h4>{{store.manager.first_name}} {{store.manager.last_name}}</h4>
+                </div>
+                <div align="center" class="col-lg-3">
+                    <div>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editModal">Edit</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Manager profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Author" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" placeholder="Genre" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" placeholder="Title">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Manager profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" placeholder="Author" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" placeholder="Genre" style="margin-bottom: 7%">
+                    <input type="text" class="form-control" placeholder="Title">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

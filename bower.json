@@ -1,0 +1,8 @@
+{
+  "name": "mean-stack-demo",
+  "version": "1.0.0-SNAPSHOT",
+  "productName": "MEAN Stack Bower",
+  "dependencies": {
+    "bootstrap": "latest"
+  }
+}
