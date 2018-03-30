@@ -15,6 +15,7 @@
     "express": "latest",
     "express-session": "latest",
     "method-override": "latest",
-    "mongoose": "latest"
+    "mongoose": "latest",
+    "nexmo": "latest"
   }
 }
